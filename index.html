@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>E-commerce de Eletrônicos</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="categoria.php?categoria=eletronicos">Eletrônicos</a></li>
+                <li><a href="#">Carrinho</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="categories">
+        <h2>Categorias</h2>
+        <a class="category-card" href="categoria.php?categoria=categoria1">Placas de vídeo</a>
+        <a class="category-card" href="categoria.php?categoria=categoria2">Placa Mãe</a>
+        <a class="category-card" href="categoria.php?categoria=categoria3">Gamer</a>
+    </section>
+
+    <section class="carousel">
+        <h2>Produtos em Destaque</h2>
+        <div class="product-carousel">
+            <div class="product-slide">
+                <img src="./img/61eAnU6ggkL._AC_SX522_.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1.</p>
+                <p class="price">R$ 999,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-slide">
+                <img src="./img/gabinete-gamer-hyrax-hgb720-mid-tower-atx-frente-e-lateral-em-vidro-temperado-branco-hgb720w_1688578035_g.jpg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do Produto 2.</p>
+                <p class="price">R$ 1499,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-slide">
+                <img src="./img/monitor-gamer-superframe-vision-ultra-34-pol-curvo-ultrawide-25k-quad-hd-va-99-srgb-hdr-freesync-1ms-165hz-hdmidp-white-sfvc-3415-2_174751.jpg" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do Produto 2.</p>
+                <p class="price">R$ 1499,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-slide">
+                <img src="./img/monitor-gamer-superframe-vision-ultra-34-pol-quad-hd-ips-g-syncfreesync-1ms-165hz-hdmidp-sfv3415_148624.webp" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do Produto 2.</p>
+                <p class="price">R$ 1499,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-slide">
+                <img src="./img/razer-kraken-main-v2.webp" alt="Produto 2">
+                <h3>Produto 2</h3>
+                <p>Descrição do Produto 2.</p>
+                <p class="price">R$ 1499,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+    </section>
+
+    <section class="products">
+        <h2>Produtos</h2>
+        <div class="product-grid">
+            <div class="product-card">
+                <img src="./img/placa-de-video-rtx-4060-ti-ventus-msi-nvidia-geforce-8-gb-gddr6-dlss-ray-tracing_1684770175_gg.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1.</p>
+                <p class="price">R$ 999,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./img/placa-de-video-rtx-4070-ti-ex-gamer-white.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1.</p>
+                <p class="price">R$ 999,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <div class="product-card">
+                <img src="./img/b450m-steel-legend-ddr4.jpg" alt="Produto 1">
+                <h3>Produto 1</h3>
+                <p>Descrição do Produto 1.</p>
+                <p class="price">R$ 999,99</p>
+                <button class="add-to-cart">Adicionar ao Carrinho</button>
+            </div>
+            <!-- Repita os blocos de product-card para cada produto -->
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 E-commerce de Eletrônicos</p>
+    </footer>
+
+    <script src="./JS/index.js"></script>
+</body>
+
+</html>
