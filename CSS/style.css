@@ -87,8 +87,9 @@ body {
 }
 
 /* Estilos para a seção de produtos */
-.products {
+* Estilos para a seção de produtos */ .products {
     text-align: center;
+    padding: 20px;
 }
 
 .product-grid {
@@ -97,6 +98,28 @@ body {
     /* Três colunas lado a lado */
     gap: 20px;
     /* Espaçamento entre os cards */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 20px;
+    text-align: center;
+    background-color: #fff;
+    transition: transform 0.2s;
+    height: 80%;
+    /* Todos os cards terão a mesma altura */
+    display: flex;
+    flex-direction: column;
+}
+
+.product-card:hover {
+    transform: translateY(-5px);
+}
+
+.product-card img {
+    max-width: 80%;
+    height: auto;
+    margin-bottom: 10px;
 }
 
 .price {
@@ -114,4 +137,13 @@ body {
 
 .add-to-cart:hover {
     background-color: #d9381e;
+}
+
+/* Rodapé */
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    margin-top: 262px;
+    padding: 8px;
 }
