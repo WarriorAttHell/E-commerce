@@ -31,38 +31,35 @@ Para executar o projeto localmente, siga estas etapas:
 
    Configure o servidor web (como Apache) para servir os arquivos PHP.
 
-Importe o banco de dados a partir do arquivo SQL fornecido.
+2. Importe o banco de dados a partir do arquivo SQL fornecido.
 
-Atualize as configurações de conexão com o banco de dados no arquivo PHP, se necessário.
+3. Atualize as configurações de conexão com o banco de dados no arquivo PHP, se necessário.
 
-Abra o projeto no seu navegador da web.
+4. Abra o projeto no seu navegador da web.
 
 Uso
-Navegue pela loja para ver os produtos disponíveis.
-Adicione produtos ao seu carrinho de compras.
-Prossiga para a finalização do pedido.
-Acesse a área de administração para gerenciar produtos e categorias.
-Contribuição
+ - Navegue pela loja para ver os produtos disponíveis.
+ - Adicione produtos ao seu carrinho de compras.
+ - Prossiga para a finalização do pedido.
+ - Acesse a área de administração para gerenciar produtos e categorias.
+ - Contribuição
+ - Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
+
+# Contribuição
 Contribuições são bem-vindas! Se você deseja contribuir para este projeto, siga estas etapas:
 
-Faça um fork deste repositório.
+1. Faça um fork deste repositório.
 
-Crie uma branch para a sua contribuição:
-
-shell
-Copy code
+2. Crie uma branch para a sua contribuição:
 git checkout -b minha-contribuicao
-Faça as alterações desejadas e faça commit delas:
 
-shell
-Copy code
+3. Faça as alterações desejadas e faça commit delas:
 git commit -m "Minha contribuição"
-Envie as alterações para o seu fork:
 
-shell
-Copy code
+4. Envie as alterações para o seu fork:
 git push origin minha-contribuicao
-Abra uma solicitação pull para este repositório.
 
-Licença
+5.Abra uma solicitação pull para este repositório.
+
+# Licença
 Este projeto está licenciado sob a Licença MIT - consulte o arquivo LICENSE para obter detalhes.
