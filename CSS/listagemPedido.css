@@ -1,0 +1,82 @@
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+h1 {
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px;
+}
+
+/* Estilize a tabela de pedidos */
+table.order-grid {
+    margin: 20px auto; /* Centralize a tabela e adicione margem nas laterais */
+    width: 90%; /* Defina a largura desejada */
+    border-collapse: separate;
+    border-spacing: 0 10px; /* Espaçamento entre as colunas */
+}
+
+table.order-grid th,
+table.order-grid td {
+    padding: 10px;
+    text-align: center;
+}
+
+table.order-grid th {
+    background-color: #333;
+    color: #fff;
+    font-weight: bold;
+}
+
+table.order-grid tr {
+    background-color: #f5f5f5;
+    border-bottom: 1px solid #ddd; /* Linha separadora entre as linhas */
+}
+
+table.order-grid tr:last-child {
+    border-bottom: none; /* Não adicionar linha separadora para a última linha */
+}
+
+table.order-grid td {
+    vertical-align: middle;
+}
+
+/* Estilize os elementos canvas dos gráficos */
+.chart-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 100px auto; /* Centralize os gráficos e adicione margem nas laterais */
+    width: 50%; /* Defina a largura desejada */
+}
+
+/* Estilize os elementos canvas dos gráficos */
+.chart {
+    max-width: 350px;
+    max-height: 500px;
+    margin-top: 10px;
+    display: flex;
+}

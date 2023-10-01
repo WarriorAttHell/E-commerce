@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Produtos</title>
+    <link rel="stylesheet" href="../CSS/UpdateProdutos.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home" href="../admin.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Lista de Produtos</h1>
+    <div class="container">
+        <table>
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome do Produto</th>
+                    <th>Descrição</th>
+                    <th>Preço Unitário</th>
+                    <th>imagem</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="product-list">
+                <!-- Aqui os dados da tabela produtos serão inseridos dinamicamente -->
+            </tbody>
+        </table>
+    </div>
+    <script src="../JS/updateProduto.js"></script>
+</body>
+
+</html>

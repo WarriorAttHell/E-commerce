@@ -1,0 +1,75 @@
+/* Navbar */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: 0; /* Remover o preenchimento padrão da lista */
+}
+
+.navbar ul li {
+    margin: 0; /* Remover margens */
+}
+
+.navbar a {
+    text-decoration: none;;
+    color: #fff;
+    display: inline-block; /* Adicionar este estilo */
+    padding: 0 20px; /* Adicionar um espaçamento para separar os itens */
+}
+
+
+
+/* Estilo personalizado para a página de cadastro de produtos */
+
+/* Estilizar o título */
+h1 {
+    color: #007bff; /* Azul */
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Estilizar os campos e rótulos do formulário */
+.form-group label {
+    font-weight: bold;
+    color: #ff6600; /* Laranja */
+}
+
+/* Estilizar o botão de cadastro */
+.btn-primary {
+    background-color: #007bff; /* Azul */
+    border-color: #007bff; /* Azul */
+}
+
+.btn-primary:hover {
+    background-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+    border-color: #0056b3; /* Azul mais escuro ao passar o mouse */
+}
+
+/* Estilizar o fundo do corpo da página */
+body {
+    background-color: #f8f9fa; /* Cor de fundo mais clara */
+}
+
+/* Estilizar os campos de entrada */
+.form-control {
+    border-color: #007bff; /* Adicionar borda azul aos campos */
+}
+
+/* Estilizar a área de texto de descrição */
+#descricaoProduto {
+    border-color: #007bff; /* Adicionar borda azul à área de texto */
+}
+
+.categoria-label {
+    margin-right: 20px; /* Defina a quantidade de margem à direita desejada, por exemplo, 10px */
+    color: #111 !important;
+}

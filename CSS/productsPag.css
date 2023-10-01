@@ -1,0 +1,110 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.products {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 50px; /* Espaçamento horizontal entre os cards */
+}
+
+.product-card {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 10px; /* Espaçamento vertical e horizontal entre os cards */
+}
+
+.product-card img {
+    max-width: 100%;
+    height: auto;
+}
+
+.product-card h3 {
+    margin: 10px 0;
+    font-size: 1.2rem;
+}
+
+.product-card p {
+    font-size: 1rem;
+    color: #666;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.add-to-cart {
+    background-color: blue; /* Cor azul para os botões "Adicionar ao Carrinho" */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin-top: auto;
+}
+
+.add-to-cart:hover {
+    background-color: #0056b3; /* Cor de destaque ao passar o mouse */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.prev, .next {
+    background-color: orange; /* Cor laranja para os botões de navegação */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    margin: 0 10px;
+    margin-top: 20px;
+}
+
+.prev:hover, .next:hover {
+    background-color: darkorange; /* Cor de destaque ao passar o mouse */
+}

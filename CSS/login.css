@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centraliza verticalmente */
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos específicos para a tela de login */
+.login-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    margin-top: 8px;
+    color: white;
+    cursor: pointer;
+}
+
+/* Estilos específicos para a tela de registro */
+.register-button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 8px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+}

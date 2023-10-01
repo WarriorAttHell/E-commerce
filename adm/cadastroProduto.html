@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <!-- Adicione a ligação para o Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../CSS/cadastroProduto.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home" href="../index.html">Home</a></li>
+                <li><a class="home" href="../admin.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Cadastro de Produtos</h1>
+        <form>
+            <div class="form-group">
+                <label for="nomeProduto"><strong>Nome do Produto</strong></label>
+                <input type="text" class="form-control" name="nomeProduto" id="nomeProduto"
+                    placeholder="Digite o nome do produto" required>
+            </div>
+            <div class="form-group">
+                <label for="categoria"><strong>Categoria do Produto</strong></label>
+                <br>
+                <label for="categoria" class="categoria-label"><strong>1 - Placa de vídeo</strong></label>
+                <label for="categoria" class="categoria-label"><strong>2 - Placa Mãe</strong></label>
+                <label for="categoria" class="categoria-label"><strong>3 - Gamer</strong></label>
+                <input type="number" class="form-control" name="categoria" id="categoria"
+                    placeholder="Insria a categoria do produto" required min="1" max="3">
+            </div>
+            <div class="form-group">
+                <label for="descricaoProduto"><strong>Descrição do Produto</strong></label>
+                <textarea class="form-control" name="descricaoProduto" id="descricaoProduto" rows="3"
+                    placeholder="Digite a descrição do produto"></textarea>
+            </div>
+            <div class="form-group">
+                <label for="precoProduto"><strong>Preço Unitário</strong></label>
+                <input type="text" class="form-control" id="precoProduto" name="precoProduto"
+                    placeholder="Digite o preço unitário" required>
+            </div>
+            <div class="form-group">
+                <label for="imagemProduto"><strong>URL da Imagem do Produto</strong></label>
+                <input type="text" class="form-control" name="imagemProduto" id="imagemProduto"
+                    placeholder="Cole a URL da imagem" required>
+            </div>
+
+
+            <button type="submit" class="btn-primary">Cadastrar Produto</button>
+        </form>
+    </div>
+    <script src="../JS/cadastroProduto.js"></script>
+</body>
+
+</html>

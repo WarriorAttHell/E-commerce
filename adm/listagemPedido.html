@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Pedidos</title>
+    <link rel="stylesheet" href="../CSS/listagemPedido.css">
+    <!-- Inclua o Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home" href="../index.html">Home</a></li>
+                <li><a class="Menu" href="../admin.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1>Lista de Pedidos</h1>
+
+    <table class="order-grid">
+        <thead>
+            <tr>
+                <th>Número do Pedido</th>
+                <th>Cliente</th>
+                <th>Data do Pedido</th>
+                <th>Valor Total</th>
+            </tr>
+        </thead>
+        <tbody id="pedidoList">
+            <!-- Os dados da tabela serão preenchidos dinamicamente aqui -->
+        </tbody>
+    </table>
+    <div class="chart-container">
+        <div class="chart">
+            <!-- Adicione um elemento canvas para o gráfico de pedidos -->
+            <canvas id="barChartPedidos" width="1000" height="2000"></canvas>
+        </div>
+        <div class="chart">
+            <!-- Adicione um elemento canvas para o gráfico de faturamento -->
+            <canvas id="barChartFaturamento" width="1000" height="2000"></canvas>
+        </div>
+    </div>
+    
+
+    <script src="../JS/listagemPedido.js"></script>
+</body>
+
+</html>

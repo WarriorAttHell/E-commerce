@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./CSS/carrinho.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <title>Carrinho de Compras</title>
+    <style>
+        .payment-description {
+            display: none;
+        }
+
+        .show-description {
+            display: block;
+        }
+
+        .cart-section {
+            margin-bottom: 200px;
+        }
+
+        #finalizar-compra {
+            display: block;
+            margin: 10px auto;
+            padding: 10px 20px;
+            border-radius: 10px;
+            background-color: #28a745;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+
+        #finalizar-compra:hover {
+            background-color: #218838;
+        }
+
+        .div-finaliza {
+            margin: 0 auto;
+            max-width: 200px;
+            text-align: center;
+        }
+
+        .product-cart {
+            border: 1px solid #ccc;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        .product-cart img {
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-navbar">
+        <nav>
+            <ul>
+                <li><a class="home-link" href="index.html">Home</a></li>
+                <li><a href="#">Contato</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="cart-section">
+        <section class="products-section">
+            <h2>Produtos no Carrinho</h2>
+            <div id="cart-products" class="product-grid-container">
+            </div>
+        </section>
+        <section class="payment-section">
+            <h2>Formas de Pagamento</h2>
+            <div class="payment-options">
+                <label>
+                    <input type="radio" name="payment" value="pix"> Pix
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="boleto"> Boleto
+                </label>
+                <label>
+                    <input type="radio" name="payment" value="cartao"> Cartão
+                </label>
+            </div>
+            <div class="payment-description" id="pix-description">
+                <p>Leia o código abaixo para obter a chave pix.</p>
+                <img src="./img/qrcode.png" alt="QRCode Pix" id="pix-qrcode">
+            </div>
+            <div class="payment-description" id="boleto-description">
+                <p></p>
+                <img src="./img/boleto.png" alt="Boleto">
+            </div>
+            <div class="payment-description" id="cartao-description">
+                <p>Preencha os dados do cartão abaixo.</p>
+                <div id="div-cartao">
+                    <input type="number" id="cartao-numero" placeholder="Número do Cartão">
+                    <input id="cartao-data" type="text" placeholder="MM/AAAA">
+                    <input type="number" id="cartao-codigo" placeholder="CVC">
+                </div>
+            </div>
+            <div class="div-finaliza">
+                <!-- Formulário para finalizar a compra -->
+                <form id="finalizar-compra-form">
+                    <button type="submit" class="finalizar-compra" name="finalizar-compra" id="finalizar-compra" style="display: none;">Finalizar Compra</button>
+                </form>
+            </div>
+        </section>
+        <div class="div-finaliza">
+            <button id="finalizar-compra" style="display: none;">Finalizar Compra</button>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 E-commerce de Eletrônicos</p>
+    </footer>
+
+    <script src="./JS/carrinho.js"></script>
+</body>
+
+</html>

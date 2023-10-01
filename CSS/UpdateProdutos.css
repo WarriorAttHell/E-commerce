@@ -1,0 +1,277 @@
+/* Navbar */
+
+.navbar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar ul li {
+    text-align: center;
+    margin: 0 20px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #fff;
+}
+
+/* Estilos globais */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Estilos para a tabela de produtos */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+table, th, td {
+    border: 1px solid #ccc;
+}
+
+th, td {
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #333;
+    color: #fff;
+}
+
+/* Estilos para botões */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.button:hover {
+    background-color: #555;
+}
+
+/* Estilos para campos de edição (para edição de produtos) */
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para o botão de salvar (para edição de produtos) */
+.save-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+/* Estilos para o botão de cancelar (para edição de produtos) */
+.cancel-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* Estilos para as linhas de edição (inicialmente ocultas) */
+.edit-row {
+    display: none;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* Estilo para ocultar elementos */
+.hidden {
+    display: none;
+}
+
+/* Estilos para campos de edição (para edição de produtos) */
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box; /* Adiciona o padding ao tamanho total */
+}
+
+/* Estilos para a linha de edição (inicialmente oculta) */
+.edit-row {
+    display: none;
+}
+
+/* Estilos para o botão de salvar (para edição de produtos) */
+.save-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #4CAF50;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.save-button:hover {
+    background-color: #45a745; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para o botão de cancelar (para edição de produtos) */
+.cancel-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #ccc;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+}
+
+/* ... (seu CSS existente) ... */
+
+/* Estilos para botões de Editar e Excluir */
+.edit-button,
+.delete-button {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #007bff; /* Cor azul para botões de editar */
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.edit-button:hover,
+.delete-button:hover {
+    background-color: #0056b3; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para campos de edição (para edição de produtos) */
+.edit-input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Estilos para o botão de salvar (para edição de produtos) */
+.save-button {
+    background-color: #4CAF50;
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+}
+
+.save-button:hover {
+    background-color: #45a745; /* Cor mais escura ao passar o mouse */
+}
+
+/* Estilos para o botão de cancelar (para edição de produtos) */
+.cancel-button {
+    background-color: #ccc;
+    display: inline-block;
+    padding: 8px 16px;
+    color: #fff;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    margin-right: 5px;
+
+}
+
+/* Estilo para centralizar a tabela */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200hv;
+}
+
+        /* Estilo para ajustar a largura mínima das colunas, exceto a coluna de imagem */
+        #product-list th:not(:nth-child(5)),
+        #product-list td:not(:nth-child(5)) {
+            min-width: 150px; /* Defina a largura mínima desejada para as colunas */
+            text-align: center; /* Centraliza o texto nas colunas */
+        }
+
+        #product-list th:not(:nth-child(3)),
+        #product-list td:not(:nth-child(3)) {
+            min-width: 150px; /* Defina a largura mínima desejada para as colunas */
+            text-align: center; /* Centraliza o texto nas colunas */
+        }
+
+        /* Estilo para ajustar a largura máxima da coluna de imagem */
+        #product-list td:nth-child(5) {
+            max-width: 200px; /* Defina o tamanho máximo desejado para a coluna de imagem */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+        #product-list td:nth-child(3) {
+            max-width: 200px; /* Defina o tamanho máximo desejado para a coluna de imagem */
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+                /* Estilo para a coluna de Ações */
+        #product-list td:last-child {
+            display: flex;
+            gap:  5PX;
+
+
+        }
+
+        /* Estilo para os botões de Ações (Editar e Excluir) */
+        .action-buttons {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap: 5px; /* Espaço entre os botões */
+        }
