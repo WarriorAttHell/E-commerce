@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Produtos</title>
+    <!-- Adicione a ligação para o Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Estilos personalizados -->
+    <link rel="stylesheet" href="../CSS/cadastroDepartamento.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-maskmoney/3.0.2/jquery.maskMoney.min.js"></script>
+
+
+</head>
+
+<body>
+    <header>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home" href="../index.html">Home</a></li>
+                <li><a class="home" href="../admin.html">Menu</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1 class="text-center">Cadastro de Departamento</h1>
+        <form>
+            <div class="form-group">
+                <label for="descricaoDepartamento"><strong>Nome do Departamento</strong></label>
+                <input type="text" class="form-control" name="descricaoDepartamento" id="descricaoDepartamento"
+                    placeholder="Digite o nome do Departamento" required>
+            </div>
+
+            <button type="submit" class="btn-primary">Cadastrar Departamento</button>
+        </form>
+    </div>
+    <script src="../JS/cadastroDepartamento.js"></script>
+</body>
+
+</html>

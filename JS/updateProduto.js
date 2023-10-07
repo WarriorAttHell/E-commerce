@@ -21,6 +21,8 @@ $(document).ready(function () {
                     $("<td>").text(product.descricao).appendTo(productRow);
                     $("<td>").text("R$ " + parseFloat(product.precoProduto).toFixed(2)).appendTo(productRow);
                     $("<td>").text(product.imagem).appendTo(productRow);
+                    $("<td>").text(product.idDepartamento).appendTo(productRow);
+                    $("<td>").text(product.categoria).appendTo(productRow);
                     $("<td>").html('<button class="edit-button" data-id="' + product.codigo + '">Editar</button>' +
                         '<button class="delete-button" data-id="' + product.codigo + '">Excluir</button>').appendTo(productRow);
 
@@ -42,21 +44,27 @@ $(document).ready(function () {
         var precoProduto = row.find("td:eq(3)").text();
         precoProduto = parseFloat(precoProduto.replace("R$ ", "").replace(",", ".")); // Converter para número
         var imagem = row.find("td:eq(4)").text();
+        var idDepartamento = row.find("td:eq(5)").text();
+        var categoria = row.find("td:eq(6)").text();
 
         // Salvar os dados originais em variáveis de data-
         row.data("original-nome", nome);
         row.data("original-descricao", descricao);
         row.data("original-precoProduto", precoProduto);
         row.data("original-imagem", imagem);
+        row.data("original-idDepartamento", idDepartamento);
+        row.data("original-categoria", categoria);
 
         // Substituir elementos de texto por campos de edição
         row.find("td:eq(1)").html('<input type="text" class="edit-input" id="edit-nome" value="' + nome + '">');
         row.find("td:eq(2)").html('<input type="text" class="edit-input" id="edit-descricao" value="' + descricao + '">');
         row.find("td:eq(3)").html('<input type="text" class="edit-input" id="edit-precoProduto" value="' + precoProduto + '">');
         row.find("td:eq(4)").html('<input type="text" class="edit-input" id="edit-imagem" value="' + imagem + '">');
+        row.find("td:eq(5)").html('<input type="text" class="edit-input" id="edit-idDepartamento" value="' + idDepartamento + '">');
+        row.find("td:eq(6)").html('<input type="text" class="edit-input" id="edit-categoria" value="' + categoria + '">');
 
         // Substituir botão "Editar" por botões "Salvar" e "Cancelar"
-        row.find("td:eq(5)").html('<button class="save-button" data-id="' + id + '">Salvar</button>' +
+        row.find("td:eq(7)").html('<button class="save-button" data-id="' + id + '">Salvar</button>' +
             '<button class="cancel-button">Cancelar</button>');
 
         // Ocultar o botão "Editar" atual
@@ -78,7 +86,9 @@ $(document).ready(function () {
         row.find("td:eq(2)").html(row.data("original-descricao"));
         row.find("td:eq(3)").html("R$ " + parseFloat(row.data("original-precoProduto")).toFixed(2));
         row.find("td:eq(4)").html(row.data("original-imagem"));
-        row.find("td:eq(5)").html('<button class="edit-button" data-id="' + row.find(".save-button").data("id") + '">Editar</button>' +
+        row.find("td:eq(5)").html(row.data("original-idDepartamento"));
+        row.find("td:eq(6)").html(row.data("original-categoria"));
+        row.find("td:eq(7)").html('<button class="edit-button" data-id="' + row.find(".save-button").data("id") + '">Editar</button>' +
             '<button class="delete-button" data-id="' + row.find(".save-button").data("id") + '">Excluir</button>');
 
         // Exibir o botão "Editar" novamente
@@ -86,11 +96,11 @@ $(document).ready(function () {
     });
 
     // Função para atualizar um produto
-    function atualizarProduto(id, nome, descricao, precoProduto, imagem) {
+    function atualizarProduto(id, nome, descricao, precoProduto, imagem, idDepartamento, categoria) {
         $.ajax({
             type: "GET",
             url: "../PHP/UpdateProdutos.php?action=atualizar",
-            data: { id: id, nome: nome, descricao: descricao, precoProduto: precoProduto, imagem: imagem },
+            data: { id: id, nome: nome, descricao: descricao, precoProduto: precoProduto, imagem: imagem, idDepartamento: idDepartamento, categoria: categoria },
             dataType: "json",
             success: function (response) {
                 if (response.success) {
@@ -125,8 +135,10 @@ $(document).ready(function () {
         var descricao = row.find("#edit-descricao").val();
         var precoProduto = row.find("#edit-precoProduto").val();
         var imagem = row.find("#edit-imagem").val();
+        var idDepartamento = row.find("#edit-idDepartamento").val();
+        var categoria = row.find("#edit-categoria").val();
 
         // Chamar a função para atualizar o produto
-        atualizarProduto(id, nome, descricao, precoProduto, imagem);
+        atualizarProduto(id, nome, descricao, precoProduto, imagem, idDepartamento, categoria);
     });
 });

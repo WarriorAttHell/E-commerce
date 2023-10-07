@@ -7,11 +7,11 @@ $descricaoProduto = $mysqli->real_escape_string($_GET['descricaoProduto']);
 $precoProduto = $mysqli->real_escape_string($_GET['precoProduto']);
 $imagemProduto = $mysqli->real_escape_string($_GET['imagemProduto']);
 $categoria = $mysqli->real_escape_string($_GET['categoria']);
+$departamento = $mysqli->real_escape_string($_GET['idDepartamento']);
 
 
-error_log($precoProduto);
 
-$sql_code = "INSERT INTO produtos (Nome, Descricao, precoProduto, Imagem, categoria) VALUES ('$nomeProduto', '$descricaoProduto', '$precoProduto', '$imagemProduto', '$categoria')";		
+$sql_code = "INSERT INTO produtos (Nome, Descricao, precoProduto, Imagem, categoria, idDepartamento) VALUES ('$nomeProduto', '$descricaoProduto', '$precoProduto', '$imagemProduto', '$categoria', '$departamento')";		
 $sql_query = $mysqli->query($sql_code);
 error_log($sql_query);
 

@@ -5,7 +5,7 @@ require_once("conexao.php");
 function listarProdutos() {
     global $mysqli;
 
-    $query = "SELECT codigo,nome,descricao,precoProduto, imagem FROM produtos";
+    $query = "SELECT codigo, nome, descricao, precoProduto, imagem, idDepartamento, categoria FROM produtos";
     $result = $mysqli->query($query);
 
     $produtos = array();
@@ -18,10 +18,10 @@ function listarProdutos() {
 }
 
 // Função para atualizar um produto
-function atualizarProduto($id, $nome, $descricao, $precoProduto, $imagem) {
+function atualizarProduto($id, $nome, $descricao, $precoProduto, $imagem, $idDepartamento, $categoria) {
     global $mysqli;
 
-    $query = "UPDATE produtos SET nome='$nome', descricao='$descricao', precoProduto='$precoProduto', imagem = '$imagem' WHERE codigo=$id";
+    $query = "UPDATE produtos SET nome='$nome', descricao='$descricao', precoProduto='$precoProduto', imagem = '$imagem', idDepartamento = '$idDepartamento', categoria = '$categoria' WHERE codigo=$id";
     $result = $mysqli->query($query);
 
     return $result;
@@ -43,13 +43,15 @@ if (isset($_GET['action'])) {
         $produtos = listarProdutos();
         echo json_encode($produtos);
     } elseif ($_GET['action'] === 'atualizar') {
-        $id = $_GET['id'];  // Correção aqui: usar $_GET para obter o id
+        $id = $_GET['id']; 
         $nome = $_GET['nome'];
         $descricao = $_GET['descricao'];
         $precoProduto = $_GET['precoProduto'];
         $imagem = $_GET['imagem'];
+        $idDepartamento = $_GET['idDepartamento'];
+        $categoria = $_GET['categoria'];
 
-        $result = atualizarProduto($id, $nome, $descricao, $precoProduto, $imagem);
+        $result = atualizarProduto($id, $nome, $descricao, $precoProduto, $imagem, $idDepartamento, $categoria);
         
 
         if ($result) {

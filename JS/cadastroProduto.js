@@ -7,6 +7,9 @@ $(document).ready(function () {
         decimal: ','
     });
 
+    // Preencher o campo de seleção de departamento com os dados do servidor
+    fetchDepartments();
+
     $(".btn-primary").click(function (event) {
         event.preventDefault();
 
@@ -15,20 +18,22 @@ $(document).ready(function () {
         var precoProduto = $("input[name='precoProduto']").maskMoney('unmasked')[0]; // Obtém o valor não formatado
         var imagemProduto = $("input[name='imagemProduto']").val();
         var categoria = $("input[name='categoria']").val();
+        var idDepartamento = $("select[name='idDepartamento']").val(); // Obtém o ID do departamento selecionado
 
-        cadastrarProduto(nomeProduto, descricaoProduto, precoProduto, imagemProduto, categoria);
+        cadastrarProduto(nomeProduto, descricaoProduto, precoProduto, imagemProduto, categoria, idDepartamento);
     });
 
-    function cadastrarProduto(nomeProduto, descricaoProduto, precoProduto, imagemProduto, categoria) {
+    function cadastrarProduto(nomeProduto, descricaoProduto, precoProduto, imagemProduto, categoria, idDepartamento) {
         $.ajax({
             type: "GET",
             url: "../PHP/cadastroProduto.php",
             data: {
-                nomeProduto : nomeProduto,
-                descricaoProduto : descricaoProduto,
-                precoProduto : precoProduto,
-                imagemProduto : imagemProduto,
-                categoria : categoria
+                nomeProduto: nomeProduto,
+                descricaoProduto: descricaoProduto,
+                precoProduto: precoProduto,
+                imagemProduto: imagemProduto,
+                categoria: categoria,
+                idDepartamento: idDepartamento 
             },
             success: function (response) {
                 if (response === "1") {
@@ -41,5 +46,28 @@ $(document).ready(function () {
         });
     }
 
-        });
+    // Função para buscar os departamentos e preencher o campo de seleção
+    function fetchDepartments() {
+        $.ajax({
+            type: "GET",
+            url: "../PHP/buscaDepartamento.php",
+            dataType: "json",
+            success: function (data) {
+                if (data.length > 0) {
+                    // Limpa o campo de seleção
+                    $("select[name='idDepartamento']").empty();
 
+                    // Preenche o campo de seleção com os departamentos recebidos
+                    data.forEach(function (department) {
+                        $("select[name='idDepartamento']").append(
+                            $("<option></option>").attr("value", department.idDepartamento).text(department.descricao)
+                        );
+                    });
+                }
+            },
+            error: function (xhr, status, error) {
+                console.error("Erro ao buscar departamentos:", error);
+            }
+        });
+    }
+});

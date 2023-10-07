@@ -133,4 +133,40 @@ $(document).ready(function () {
             }
         });
     }
+
+    $(document).ready(function () {
+        // Função para buscar os 5 últimos produtos e preencher o carrossel
+        function fetchLatestProducts() {
+            $.ajax({
+                type: "GET",
+                url: "./PHP/carrossel.php", // Altere o caminho para o seu arquivo PHP
+                dataType: "json",
+                success: function (data) {
+                    if (data.length > 0) {
+                        // Limpa o carrossel
+                        $(".product-carousel").empty();
+    
+                        // Preenche o carrossel com os produtos recebidos
+                        data.forEach(function (product) {
+                            var productSlide = $("<div class='product-slide'></div>");
+                            var productImage = $("<img src='" + product.imagem + "' alt='" + product.nome + "'>");
+                            var productName = $("<h3>" + product.nome + "</h3>");
+    
+                            productSlide.append(productImage);
+                            productSlide.append(productName);
+    
+                            $(".product-carousel").append(productSlide);
+                        });
+                    }
+                },
+                error: function (xhr, status, error) {
+                    console.error("Erro ao buscar produtos:", error);
+                }
+            });
+        }
+    
+        // Chama a função para buscar e preencher os produtos no carrossel
+        fetchLatestProducts();
+    });
+
 });
